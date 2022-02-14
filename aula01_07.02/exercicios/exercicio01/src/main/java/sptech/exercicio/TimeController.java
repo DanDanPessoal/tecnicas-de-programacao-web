@@ -1,4 +1,4 @@
-package sptech.exercicios;
+package sptech.exercicio;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +10,7 @@ public class TimeController {
     private int empate = 0;
     private int derrota = 0;
 
+    // --------------------------------------------------------
     @GetMapping("/time/cadastrar-vitoria")
     public String vitoria(){
 
@@ -18,6 +19,7 @@ public class TimeController {
 
     }
 
+    // --------------------------------------------------------
     @GetMapping("/time/cadastrar-empate")
     public String empate(){
 
@@ -27,6 +29,7 @@ public class TimeController {
 
     }
 
+    // --------------------------------------------------------
     @GetMapping("/time/cadastrar-derrota")
     public String derrota(){
 
@@ -36,6 +39,7 @@ public class TimeController {
 
     }
 
+    // --------------------------------------------------------
     @GetMapping("/time/pontuacao")
     public String pontuacao(){
 
@@ -56,4 +60,5 @@ public class TimeController {
 
         }
     }
+
 }

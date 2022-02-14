@@ -1,4 +1,4 @@
-package sptech.project01;
+package sptech.exercicio;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -66,5 +66,4 @@ public class AlunoController {
 
         return msg;
     }
-
 }

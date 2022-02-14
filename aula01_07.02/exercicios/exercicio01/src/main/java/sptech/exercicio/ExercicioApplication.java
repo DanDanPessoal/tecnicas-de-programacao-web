@@ -1,13 +1,13 @@
-package sptech.exercicios;
+package sptech.exercicio;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ExerciciosApplication {
+public class ExercicioApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ExerciciosApplication.class, args);
+		SpringApplication.run(ExercicioApplication.class, args);
 	}
 
 }
