@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>sptech</groupId>
-	<artifactId>project01</artifactId>
+	<artifactId>exercicios</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>project01</name>
-	<description>Primeiro projeto com Spring boot</description>
+	<name>exercicios</name>
+	<description>Exercicios referentes a aula do dia 07.02.2022</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>

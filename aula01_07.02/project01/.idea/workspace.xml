@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41d2c8e4-ee23-475c-97a3-dc67a3df7e40" name="Changes" comment="" />
+    <list default="true" id="41d2c8e4-ee23-475c-97a3-dc67a3df7e40" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project01/src/main/java/sptech/project01/Project01Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/project01/src/main/java/sptech/project01/Project01Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project01/src/main/java/sptech/project01/TimeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project01/src/main/java/sptech/project01/TimeController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +37,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/project01/pom.xml" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -43,7 +49,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1644266932157</updated>
+      <workItem from="1644806756637" duration="859000" />
+      <workItem from="1644807639703" duration="77000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

@@ -13,6 +13,7 @@ public class ContadorController {
 
     private int contador = 0;
 
+    // --------------------------------------------------------
     @GetMapping("/contador/contar")
     public String contar(){
 
@@ -20,6 +21,7 @@ public class ContadorController {
 
     }
 
+    // --------------------------------------------------------
     @GetMapping("/contador/zerar-contador")
     public String zerarContador() {
 

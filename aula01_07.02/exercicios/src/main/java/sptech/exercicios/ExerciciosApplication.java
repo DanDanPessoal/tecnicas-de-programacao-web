@@ -1,14 +1,13 @@
-package sptech.project01;
+package sptech.exercicios;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import javax.swing.*;
-
 @SpringBootApplication
-public class Project01Application {
+public class ExerciciosApplication {
+
 	public static void main(String[] args) {
-		SpringApplication.run(Project01Application.class, args);
+		SpringApplication.run(ExerciciosApplication.class, args);
 	}
 
 }
