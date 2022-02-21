@@ -1,12 +1,11 @@
-package sptech.exercicio1;
+package sptech.exercicio1.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import sptech.exercicio1.entidade.Pokemon;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/pokemons")
@@ -16,7 +15,7 @@ public class PokemonController {
 
     // ----------------------------------------------------------
     @GetMapping("/cadastrar/{nome}/{tipo}/{forca}/{capturado}")
-    public String cadastrarPokemon(@PathVariable String nome, @PathVariable String tipo,
+    public String cadastrarPokemon(@PathVariabl e String nome, @PathVariable String tipo,
                                    @PathVariable Double forca, @PathVariable String capturado){
 
         Boolean foiCapturado;
@@ -43,7 +42,7 @@ public class PokemonController {
 
     // ----------------------------------------------------------
     @GetMapping("/remover/{indice}")
-    public String removerPokemon(@PathVariable Integer indice){
+    public String removerPokemon(@PathVariable int indice){
 
         String msg;
 
@@ -53,7 +52,7 @@ public class PokemonController {
 
         }else{
 
-            msg = "Pokemon "+ pokemonList.get(indice).getNome();
+            msg = "Pokemon "+ pokemonList.get(indice).getNome() + " removido com sucesso.";
             pokemonList.remove(indice);
 
         }
@@ -110,6 +109,9 @@ public class PokemonController {
             pokemonList.get(indice).setForca(forca);
             pokemonList.get(indice).setCapturado(foiCapturado);
 
+            // Assim funcionava também.
+            // pokemonList.set(indice, new Pokemon(nome, tipo, forca, foiCapturado));
+
             msg = "Pokemon "+ nome + " Atualizado com sucesso";
 
         }
@@ -126,6 +128,7 @@ public class PokemonController {
     }
 
     // ----------------------------------------------------------
+    // Método feito de forma clássica
     @GetMapping("{tipo}/contagem")
     public String listarQuantidadeTipoPokemon(@PathVariable String tipo){
 
@@ -140,9 +143,22 @@ public class PokemonController {
         }
 
         return "Existem " + contagem + " pokemons do tipo "+ tipo + " cadastrados";
+
     }
 
     // ----------------------------------------------------------
+    // Método melhorado da contagem.
+    @GetMapping("{tipo}/contagem2")
+    public String listarQuantidadeTipoPokemon2(@PathVariable String tipo){
+
+        Long contagem = pokemonList.stream().filter(pokemon -> pokemon.getTipo().equals(tipo)).count();
+
+        return "Existem " + contagem + " pokemons do tipo "+ tipo + " cadastrados";
+
+    }
+
+    // ----------------------------------------------------------
+    // Método feito de forma clássica
     @GetMapping("/capturados")
     public List<Pokemon> listarPokemonsCapturador(){
 
@@ -161,6 +177,16 @@ public class PokemonController {
     }
 
     // ----------------------------------------------------------
+    // Método melhorado dos capturados.
+    @GetMapping("/capturados2")
+    public List<Pokemon> listarPokemonsCapturador2(){
+
+        return pokemonList.stream().filter(pokemon -> pokemon.getCapturado()).collect(Collectors.toList());
+
+    }
+
+    // ----------------------------------------------------------
+    // Método feito de forma clássica
     @GetMapping("/fortes")
     public List<Pokemon> listarPokemonFortes(){
 
@@ -179,6 +205,16 @@ public class PokemonController {
     }
 
     // ----------------------------------------------------------
+    // Método melhorado dos fortes;
+    @GetMapping("/fortes2")
+    public List<Pokemon> listarPokemonFortes2(){
+
+        return pokemonList.stream().filter(pokemon -> pokemon.getForca()>3000).collect(Collectors.toList());
+
+    }
+
+    // ----------------------------------------------------------
+    // Método feito de forma clássica
     @GetMapping("/fracos")
     public List<Pokemon> listarPokemonFracos(){
 
@@ -195,4 +231,14 @@ public class PokemonController {
 
         return pokemonsFracos;
     }
+
+    // ----------------------------------------------------------
+    // Método melhorado dos fracos.
+    @GetMapping("/fracos2")
+    public List<Pokemon> listarPokemonFracos2(){
+
+        return pokemonList.stream().filter(pokemon -> pokemon.getForca()<=3000).collect(Collectors.toList());
+
+    }
+    
 }

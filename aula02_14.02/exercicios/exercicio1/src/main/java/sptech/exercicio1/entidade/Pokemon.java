@@ -1,4 +1,4 @@
-package sptech.exercicio1;
+package sptech.exercicio1.entidade;
 
 public class Pokemon {
 
