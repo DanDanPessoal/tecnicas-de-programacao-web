@@ -48,7 +48,7 @@ public class AlunoController {
         if(repository.existsById(codigo)){
 
             repository.deleteById(codigo);
-            ResponseEntity.status(200).build();
+            return ResponseEntity.status(200).build();
 
         }
 
